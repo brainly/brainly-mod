@@ -3,7 +3,7 @@
 var express = require('express')
 	,	request = require('request')
 	,	bodyParser = require('body-parser')
-	, confing = require('./config.json');
+	,	confing = require('./config.json');
 
 const REQUEST_HEADERS = {
 	"X-B-Token-Short": confing.token.short,
