@@ -3,7 +3,7 @@
 var express = require('express')
 	,	request = require('request')
 	,	bodyParser = require('body-parser')
-	,	confing = require('./config.json');
+	, confing = require('./config.json');
 
 const REQUEST_HEADERS = {
 	"X-B-Token-Short": confing.token.short,
@@ -20,7 +20,10 @@ app.listen(confing.port, () => { console.log(`Listening port ${confing.port}.`) 
 app.post('/', function (req, res) {
 	var secretCode = req.body.scode;
 
-	if (secretCode !== confing.secret) res.send('!ERROR! invalid code\n');
+	if (secretCode !== confing.secret) {
+		res.send('!ERROR! invalid code\n');
+		return;
+	}
 
 	res.send('OK\n');
 
