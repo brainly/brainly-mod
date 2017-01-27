@@ -8,7 +8,7 @@ var express = require('express')
 const REQUEST_HEADERS = {
 	"X-B-Token-Short": confing.token.short,
 	"X-B-Token-Long": confing.token.long,
-	'User-Agent': 'LOL',
+	'User-Agent': 'm0nclous-brainly-mod',
 	'Content-Type': 'application/json'
 };
 
